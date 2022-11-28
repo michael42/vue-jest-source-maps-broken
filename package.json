@@ -1,0 +1,30 @@
+{
+  "name": "vue-jest-source-maps-broken",
+  "license": "ISC",
+  "scripts": {
+    "test": "jest --no-cache",
+    "coverage": "jest --no-cache --coverage"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@vue/vue3-jest": "^29.2.1",
+    "babel-jest": "^29.3.1",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "@vue/vue3-jest"
+    }
+  },
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  }
+}
